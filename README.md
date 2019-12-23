@@ -11,12 +11,12 @@
    - **data section** (storing global variables)
    - **heap** (storing dynamically allocated data)
 - Diagram of process state
-![diagram_of_process_state]()
+![diagram_of_process_state](https://github.com/ustcljb/operating-systems/blob/master/figures/diagram_of_process_state.png)
 - Context switch
    - When CPU switches to another process, the system must save the state of the old process and load the saved state for the new process via a context switch
    
 - Independent process vs cooperating process
    - Cooperating processes need interposes communication (IPC)
    - Two models of IPC: **shared memory** and **message passing**
-   ![shared_memory_message_passing]()
+   ![shared_memory_message_passing](https://github.com/ustcljb/operating-systems/blob/master/figures/shared_memory_message_passing.png)
    - Synchronization
