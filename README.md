@@ -32,3 +32,5 @@
    - **Parallelism** is when tasks literally run at the same time, e.g., on a multicore processor.
    - It is possible to have concurrency without parallelism.
    ![concurrency_vs_parallelism](https://github.com/ustcljb/operating-systems/blob/master/figures/concurrency_vs_parallelism.png)
+   
+## CPU scheduling
