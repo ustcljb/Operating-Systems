@@ -25,6 +25,7 @@
 - Process vs thread
    - Each process provides the resources needed to execute a program. A process has `a virtual address space, executable code, open handles to system objects, a security context, a unique process identifier, environment variables, a priority class, minimum and maximum working set sizes, and at least one thread of execution`. Each process is started with a single thread, often called the primary thread, but can create additional threads from any of its threads.
    - A thread is an entity within a process that can be scheduled for execution. All threads of a process share its virtual address space and system resources.
+   - A thread is an independent set of values for the processor registers (for a single core).
 - Single-threaded vs multi-threaded processes
 ![single_vs_multi-threaded](https://github.com/ustcljb/operating-systems/blob/master/figures/single_vs_multi-threaded_processes.png)
 - Concurrency vs parallelism
