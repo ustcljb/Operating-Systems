@@ -49,16 +49,25 @@
    - Switching to user mode
    - Jumping to the proper location in the user program to restart that program
 - CPU scheduling criteria
-   - **CPU utilization**-keep CPU as busy as possible
-   - **Throughput**-number of processes that complete their execution per time unit
-   - **Turnaround time**-amount of time to execute a particular process
-   - **Waiting time**-total amount of time a process has been waiting in the ready queue
-   - **Response time**-amount of time it takes from when a request was submitted until the first response is produced
+   - **CPU utilization** - keep CPU as busy as possible
+   - **Throughput** - number of processes that complete their execution per time unit
+   - **Turnaround time** - amount of time to execute a particular process
+   - **Waiting time** - total amount of time a process has been waiting in the ready queue
+   - **Response time** - amount of time it takes from when a request was submitted until the first response is produced
 - Common scheduling algorithms
-   - First –come, First-serve (FCFS)
+   - **First –come, First-serve** (FCFS)
       - Convoy effect - short process behind long process
-   - Shortest-Job-First Scheduling (SJF)
-   - Round-Robin Scheduling (RR)
-   - Priority Scheduling
-   - Multilevel Queue Scheduling
+   - **Shortest-Job-First** Scheduling (SJF)
+      - Can only estimate the time of next CPU burst
+      - Preemptive version of SJF is called **shortest-remaining-time-first**
+      - ![Example 1]()
+   - **Round-Robin** Scheduling (RR)
+      - ![Example 2]()
+   - **Priority** Scheduling
+      - Problem is **starvation** - low priority processes may never execute
+      - Solution is **aging** - as time progresses increase the priority of the process
+   - **Multilevel Queue** Scheduling: Ready queue is partitioned into separate queues, eg
+      - foreground (interactive)
+      - background (batch)
+      - ![Example 3]()
 
