@@ -35,3 +35,30 @@
    ![concurrency_vs_parallelism](https://github.com/ustcljb/operating-systems/blob/master/figures/concurrency_vs_parallelism.png)
    
 ## CPU scheduling
+－ CPU scheduling decisions may take place when a process:
+   - Switches from running state to waiting state
+   - Switches from running state to ready state
+   - Switches from waiting state to ready state
+   - When a process terminates
+- Nonpreemptive scheduling: Once the CPU has been allocated to a process, the process keeps the CPU until it releases the CPU
+   - either by terminating
+   - or by switching to the waiting state. 
+- Preemptive scheduling can result in race conditions when data are shared among several processes.
+- Dispatcher module gives control of the CPU to the process selected by the CPU scheduler. It involves:
+   - Switching context
+   - Switching to user mode
+   - Jumping to the proper location in the user program to restart that program
+- CPU scheduling criteria
+   - **CPU utilization**-keep CPU as busy as possible
+   - **Throughput**-number of processes that complete their execution per time unit
+   - **Turnaround time**-amount of time to execute a particular process
+   - **Waiting time**-total amount of time a process has been waiting in the ready queue
+   - **Response time**-amount of time it takes from when a request was submitted until the first response is produced
+- Common scheduling algorithms
+   - First –come, First-serve (FCFS)
+      - Convoy effect - short process behind long process
+   - Shortest-Job-First Scheduling (SJF)
+   - Round-Robin Scheduling (RR)
+   - Priority Scheduling
+   - Multilevel Queue Scheduling
+
