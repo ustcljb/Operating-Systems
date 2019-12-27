@@ -60,14 +60,14 @@
    - **Shortest-Job-First** Scheduling (SJF)
       - Can only estimate the time of next CPU burst
       - Preemptive version of SJF is called **shortest-remaining-time-first**
-      - ![Example 1]()
+      - ![Example 1](https://github.com/ustcljb/operating-systems/blob/master/figures/Shortest_remaining_time_first.png)
    - **Round-Robin** Scheduling (RR)
-      - ![Example 2]()
+      - ![Example 2](https://github.com/ustcljb/operating-systems/blob/master/figures/Round_robin.png)
    - **Priority** Scheduling
       - Problem is **starvation** - low priority processes may never execute
       - Solution is **aging** - as time progresses increase the priority of the process
    - **Multilevel Queue** Scheduling: Ready queue is partitioned into separate queues, eg
       - foreground (interactive)
       - background (batch)
-      - ![Example 3]()
+      - ![Example 3](https://github.com/ustcljb/operating-systems/blob/master/figures/Multilevel_feedback_queue.png)
 
