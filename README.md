@@ -1,5 +1,4 @@
 # Operating-Systems
-**[Processes](processes)**<nr>
 ## Processes
 - Program vs process
    - Program is passive entity stored on disk (executable file)
