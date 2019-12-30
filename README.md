@@ -35,6 +35,7 @@
    ![concurrency_vs_parallelism](https://github.com/ustcljb/operating-systems/blob/master/figures/concurrency_vs_parallelism.png)
    
 ## CPU scheduling
+
 － CPU scheduling decisions may take place when a process:
    - Switches from running state to waiting state
    - Switches from running state to ready state
