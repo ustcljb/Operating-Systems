@@ -36,7 +36,7 @@
    
 ## CPU scheduling
 
-－ CPU scheduling decisions may take place when a process:
+- CPU scheduling decisions may take place when a process:
    - Switches from running state to waiting state
    - Switches from running state to ready state
    - Switches from waiting state to ready state
