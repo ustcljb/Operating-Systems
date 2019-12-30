@@ -71,4 +71,17 @@
       - foreground (interactive)
       - background (batch)
       - ![Example 3](https://github.com/ustcljb/operating-systems/blob/master/figures/Multilevel_feedback_queue.png)
+- Thread scheduling
+   - user-level: process contention scope (PCS)
+   - kernel-level: system contention scope (SCS)
+- Multiprocessor CPU scheduling
+   - Asymmetric multiprocessing: all scheduling decisions, I/O processing, and other system activities are handled by a single processor—the master server. The other processors execute only user code
+   - Symmetric multiprocessing: each processor is self-scheduling, all processes in common ready queue, or each has its own private queue of ready processes (Most common currently)
+      - Load balancing
+      - Push migration
+      - Pull migration
+- Real-time CPU scheduling
+   - Soft real-time systems: no guarantee as to when critical real-time process will be scheduled
+   - Hard real-time systems: task must be serviced by its deadline
+   
 
