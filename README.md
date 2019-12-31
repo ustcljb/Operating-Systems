@@ -1,4 +1,8 @@
 # Operating-Systems
+- [Processes](#processes)
+- [Threads](#threads)
+- [CPU scheduling](#cpu scheduling)
+- [Synchronization](#synchronization)
 ## Processes
 - Program vs process
    - Program is passive entity stored on disk (executable file)
