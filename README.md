@@ -84,4 +84,40 @@
    - Soft real-time systems: no guarantee as to when critical real-time process will be scheduled
    - Hard real-time systems: task must be serviced by its deadline
    
+## Synchronization
+
+- Producer-consumer problem
+- Race condition
+   - To solve race condition, we need to make sure the execution is done as an '**atomic**'(**non-interruptable**) action.   
+- Critical section problem. Each process has **critical section** segment of code:
+   - Process may be changing common variables, updating table, writing file, etc
+   - When one process in critical section, no other may be in its critical section
+   - There are two sections implemented:
+      - Entry section – first  action is to "disable interrupts"
+      - Exit  section – last action is to "enable interrupts"
+   - Algorithm is correct but results in "busy waiting"
+   - The solution of critical section problem must satisfy:
+      - Mutual exclution
+      - Progress
+      - Bounded waiting
+   - Peterson's algorithm: two processes solution
+      - Two processes share two variables:
+      - **turn**: indicates whose turn it is to enter the critical section
+      - **flag**: an array is used to indicate if a process is ready to enter the critical section. flag[i] = true  implies that process Pi is ready!
+   - Using locks to solve critical section problem: Two processes can not have a lock simultaneosly.
+   - Mutex locks
+      - Has a Boolean variable “available” associated with it to indicate if the lock is available or not.
+- Semaphores
+   - Counting semaphore – integer value can range over an unrestricted domain
+   - Binary semaphore – integer value can range only between 0 and 1
+   - No busy waiting
+   - More terminologies:
+      - Deadlock: two or more processes are waiting indefinitely for an event that can be caused by only one of the waiting processes
+      - Starvation: A process may never be removed from the semaphore queue in which it is suspended
+      - Priority inversion: Scheduling problem when lower-priority process holds a lock needed by higher-priority process
+- Classical problems:
+   - Bounded-buffer problem
+   - Readers and writers problem
+   - Dining-philosophers problem
+   
 
