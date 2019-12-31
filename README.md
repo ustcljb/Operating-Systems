@@ -1,7 +1,7 @@
 # Operating-Systems
 - [Processes](#processes)
 - [Threads](#threads)
-- [CPU scheduling](#cpu scheduling)
+- [CPU scheduling](#cpu_scheduling)
 - [Synchronization](#synchronization)
 ## Processes
 - Program vs process
