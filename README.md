@@ -122,54 +122,54 @@
 - Solve producer consumer problem using semaphores 
 
    - There are two operations in a semaphore: The wait() operation reduces the value of semaphore by 1 and the signal() operation increases its value by 1.
-```
-wait(S){
-while(S<=0);   // busy waiting
-S--;
-}
+     ```
+     wait(S){
+     while(S<=0);   // busy waiting
+     S--;
+     }
 
-signal(S){
-S++;
-}
-```
+     signal(S){
+     S++;
+     }
+     ```
    - Initialization of semaphores 
-```
-mutex = 1
-full = 0 // Initially, all slots are empty. Thus full slots are 0
-empty = n // All slots are empty initially
-```
+     ```
+     mutex = 1
+     full = 0 // Initially, all slots are empty. Thus full slots are 0
+     empty = n // All slots are empty initially
+     ```
    - Solution for producer
-```
-do{
+     ```
+     do{
 
-//produce an item
+     //produce an item
 
-wait(empty);
-wait(mutex);
+     wait(empty);
+     wait(mutex);
 
-//place in buffer
+     //place in buffer
 
-signal(mutex);
-signal(full);
+     signal(mutex);
+     signal(full);
 
-}while(true)
-```
+     }while(true)
+     ```
    - Solution for consumer
-```
-do{
+     ```
+     do{
 
-wait(full);
-wait(mutex);
+     wait(full);
+     wait(mutex);
 
-// remove item from buffer
+     // remove item from buffer
 
-signal(mutex);
-signal(empty);
+     signal(mutex);
+     signal(empty);
 
-// consumes item
+     // consumes item
 
-}while(true)
-```
+     }while(true)
+     ```
 - Classical problems:
    - Bounded-buffer problem
    - Readers and writers problem
