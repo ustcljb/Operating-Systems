@@ -119,6 +119,57 @@
       - Deadlock: two or more processes are waiting indefinitely for an event that can be caused by only one of the waiting processes
       - Starvation: A process may never be removed from the semaphore queue in which it is suspended
       - Priority inversion: Scheduling problem when lower-priority process holds a lock needed by higher-priority process
+- Solve producer consumer problem using semaphores 
+
+There are two operations in a semaphore: The wait() operation reduces the value of semaphore by 1 and the signal() operation increases its value by 1.
+```
+wait(S){
+while(S<=0);   // busy waiting
+S--;
+}
+
+signal(S){
+S++;
+}
+```
+Initialization of semaphores 
+```
+mutex = 1
+full = 0 // Initially, all slots are empty. Thus full slots are 0
+empty = n // All slots are empty initially
+```
+Solution for producer
+```
+do{
+
+//produce an item
+
+wait(empty);
+wait(mutex);
+
+//place in buffer
+
+signal(mutex);
+signal(full);
+
+}while(true)
+```
+Solution for consumer
+```
+do{
+
+wait(full);
+wait(mutex);
+
+// remove item from buffer
+
+signal(mutex);
+signal(empty);
+
+// consumes item
+
+}while(true)
+```
 - Classical problems:
    - Bounded-buffer problem
    - Readers and writers problem
