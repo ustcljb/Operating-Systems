@@ -121,7 +121,7 @@
       - Priority inversion: Scheduling problem when lower-priority process holds a lock needed by higher-priority process
 - Solve producer consumer problem using semaphores 
 
-   - There are two operations in a semaphore: The wait() operation reduces the value of semaphore by 1 and the signal() operation increases its value by 1.
+There are two operations in a semaphore: The wait() operation reduces the value of semaphore by 1 and the signal() operation increases its value by 1.
 ```
 wait(S){
 while(S<=0);   // busy waiting
@@ -132,13 +132,13 @@ signal(S){
 S++;
 }
 ```
-   - Initialization of semaphores 
+Initialization of semaphores 
 ```
 mutex = 1
 full = 0 // Initially, all slots are empty. Thus full slots are 0
 empty = n // All slots are empty initially
 ```
-   - Solution for producer
+Solution for producer
 ```
 do{
 
@@ -154,7 +154,7 @@ signal(full);
 
 }while(true)
 ```
-   - Solution for consumer
+Solution for consumer
 ```
 do{
 
