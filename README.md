@@ -119,7 +119,7 @@
       - Deadlock: two or more processes are waiting indefinitely for an event that can be caused by only one of the waiting processes
       - Starvation: A process may never be removed from the semaphore queue in which it is suspended
       - Priority inversion: Scheduling problem when lower-priority process holds a lock needed by higher-priority process
-- Solve producer consumer problem using semaphores 
+- Solve producer consumer problem using semaphores (The following code copied from [here](https://www.geeksforgeeks.org/producer-consumer-problem-using-semaphores-set-1/))
 
    - There are two operations in a semaphore: The wait() operation reduces the value of semaphore by 1 and the signal() operation increases its value by 1.
      ```
