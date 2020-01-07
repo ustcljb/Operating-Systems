@@ -3,6 +3,7 @@
 - [Threads](#threads)
 - [CPU scheduling](#cpu_scheduling)
 - [Synchronization](#synchronization)
+- [Deadlocks](#deadlocks)
 ## Processes
 - Program vs process
    - Program is passive entity stored on disk (executable file)
@@ -174,5 +175,26 @@
    - Bounded-buffer problem
    - Readers and writers problem
    - Dining-philosophers problem
+   
+## Deadlocks
+
+- Deadlocks can arise if the following four conditions hold simultaneously:
+   - Mutual exclusion
+   - Hold and wait
+   - No preemption
+   - Circular wait
+- Resource allocation graph
+   - If no cycles then no deadlocks
+   - If exists a cycle:
+      - If only one instance per source type, then exists deadlock
+      - If more than one instances exist per source type, then possibly exists deadlock
+- Handling deadlocks:
+   - Ensure the system will never enter a deadlock state
+      - Safe state: For each process Pi, when it requests, the resource can either be available or be held by all the processes Pj with j < i
+      - If single instance of a resource type, use a variant of resource allocation graph (implement a **claim edge**)
+      - If multiple instance of a resource type, use the **Banker's algorithm**: When a process gets all its resources it must return them in a finite amount of time.
+   - Allow the system to enter the deadlock state and then resolve it
+      - Maintain a wait-for graph
+   - Ignore the deadlocks. (Used by most operating systems)
    
 
