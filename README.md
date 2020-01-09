@@ -4,6 +4,7 @@
 - [CPU scheduling](#cpu_scheduling)
 - [Synchronization](#synchronization)
 - [Deadlocks](#deadlocks)
+- [Memory](#memory)
 ## Processes
 - Program vs process
    - Program is passive entity stored on disk (executable file)
@@ -197,4 +198,14 @@
       - Maintain a wait-for graph
    - Ignore the deadlocks. (Used by most operating systems)
    
+## Memory
 
+- User program can be partitioned into multiple small non-contiguous parts in the memory:
+   - Segmentation: A program is a collection of segments like main program, function, method, stack, local variables. Each segment is designed to reside into different part of the memory.
+   - Paging: Process is divided into fixed-size blocks, each of which may reside in a different part of physical memory.
+- **Virtual memory** provides the separation of user logical memory and physical memory. Which allows
+   - address spaces to be shared by several processes
+   - more efficient process creation
+   - more programs running concurrently
+   - less I/O needed to load or swap processes
+- Virtual memory can be implemented via either demand segmentation or demand paging
