@@ -209,3 +209,5 @@
    - more programs running concurrently
    - less I/O needed to load or swap processes
 - Virtual memory can be implemented via either demand segmentation or demand paging
+- Storage device hierarchy
+  ![storage device hierarchy](https://github.com/ustcljb/operating-systems/blob/master/figures/storage%20device%20hierarchy.png)
